@@ -42,13 +42,21 @@ const ContactSupport = () => {
                     <li>Customer assistance</li>
                     <li>General support</li>
                 </ul>
-                <p style={{ marginBottom: '8px', color: '#ef4444', opacity: 0.8, fontWeight: 600 }}>DO NOT use these numbers for:</p>
-                <ul style={{ margin: 0, paddingLeft: '20px', color: '#dd5555' }}>
-                    <li>OTP</li>
-                    <li>SMS verification</li>
-                    <li>Digital payments</li>
-                    <li>Payment confirmation</li>
-                    <li>Automatic booking confirmation</li>
+                <p style={{
+                    marginBottom: '8px',
+                    color: '#f5b754',
+                    fontWeight: 600
+                }}>
+                    📱 For PhonePe Payments, use these numbers:
+                </p>
+
+                <ul style={{
+                    margin: 0,
+                    paddingLeft: '20px',
+                    color: '#aaa'
+                }}>
+                    <li>📞 8639737339</li>
+                    <li>📞 9346184719</li>
                 </ul>
             </div>
         </div>
