@@ -60,26 +60,52 @@ const AdminDashboard = () => {
                 </button>
             </div>
 
-            <h1 className="heading text-gradient" style={{ marginBottom: '2rem' }}>Administrative Dashboard</h1>
+            <h1 className="heading text-gradient" style={{ marginBottom: '2rem' }}>
+                Administrative Dashboard
+            </h1>
+
+            {/* ── Cashier Portal ── */}
+            <div style={{ marginBottom: '2rem' }}>
+                <Link
+                    to="/admin/cashier"
+                    className="btn-primary"
+                    style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        textDecoration: 'none'
+                    }}
+                >
+                    💵 Cashier Portal
+                </Link>
+            </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
 
                 {/* ── Left Side: Stats ── */}
                 <div>
-                    <h2 className="heading" style={{ marginBottom: '1.5rem', fontSize: '1.8rem', color: '#fff' }}>Overview</h2>
+                    <h2 className="heading" style={{ marginBottom: '1.5rem', fontSize: '1.8rem', color: '#fff' }}>
+                        Overview
+                    </h2>
+
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                         <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center', borderLeft: '4px solid var(--primary-color)' }}>
                             <h3 style={{ color: 'var(--text-secondary-dark)', fontSize: '1rem' }}>Total Bookings</h3>
                             <p style={{ fontSize: '2.5rem', color: 'white', margin: '0.5rem 0' }}>{stats.bookings}</p>
                         </div>
+
                         <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center', borderLeft: '4px solid #10b981' }}>
                             <h3 style={{ color: 'var(--text-secondary-dark)', fontSize: '1rem' }}>Total Revenue</h3>
-                            <p style={{ fontSize: '2.5rem', color: 'white', margin: '0.5rem 0' }}>₹{stats.revenue.toLocaleString('en-IN')}</p>
+                            <p style={{ fontSize: '2.5rem', color: 'white', margin: '0.5rem 0' }}>
+                                ₹{stats.revenue.toLocaleString('en-IN')}
+                            </p>
                         </div>
+
                         <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center', borderLeft: '4px solid #3b82f6' }}>
                             <h3 style={{ color: 'var(--text-secondary-dark)', fontSize: '1rem' }}>Active Fleet</h3>
                             <p style={{ fontSize: '2.5rem', color: 'white', margin: '0.5rem 0' }}>{stats.cars}</p>
                         </div>
+
                         <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center', borderLeft: '4px solid #ef4444' }}>
                             <h3 style={{ color: 'var(--text-secondary-dark)', fontSize: '1rem' }}>Pending Approvals</h3>
                             <p style={{ fontSize: '2.5rem', color: 'white', margin: '0.5rem 0' }}>{stats.pending}</p>
@@ -89,7 +115,10 @@ const AdminDashboard = () => {
 
                 {/* ── Right Side: Active Fleet Gallery ── */}
                 <div>
-                    <h2 className="heading text-gradient" style={{ marginBottom: '1.5rem', fontSize: '1.8rem' }}>Active Fleet View</h2>
+                    <h2 className="heading text-gradient" style={{ marginBottom: '1.5rem', fontSize: '1.8rem' }}>
+                        Active Fleet View
+                    </h2>
+
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                         {fleet.map(car => (
                             <div key={car._id} className="glass-panel" style={{ overflow: 'hidden', padding: 0 }}>
@@ -99,15 +128,25 @@ const AdminDashboard = () => {
                                     background: `url(${car.imageUrl}) center/cover no-repeat`,
                                     borderBottom: '1px solid rgba(255,255,255,0.1)'
                                 }} />
+
                                 <div style={{ padding: '1.5rem' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                         <h3 style={{ margin: 0, fontSize: '1.4rem' }}>{car.name}</h3>
+
                                         {car.registrationNumber && (
-                                            <span style={{ background: 'var(--primary-color)', color: '#000', padding: '4px 10px', borderRadius: '4px', fontWeight: 'bold', fontSize: '0.9rem' }}>
+                                            <span style={{
+                                                background: 'var(--primary-color)',
+                                                color: '#000',
+                                                padding: '4px 10px',
+                                                borderRadius: '4px',
+                                                fontWeight: 'bold',
+                                                fontSize: '0.9rem'
+                                            }}>
                                                 {car.registrationNumber}
                                             </span>
                                         )}
                                     </div>
+
                                     <p style={{ color: 'var(--text-secondary-dark)', marginTop: '0.5rem', marginBottom: 0 }}>
                                         {car.type} • {car.transmission}
                                     </p>
