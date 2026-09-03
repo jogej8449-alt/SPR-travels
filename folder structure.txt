@@ -1,0 +1,106 @@
+car-rental-system/
+│
+├── client/                         # Frontend
+│   ├── public/
+│   │   ├── images/
+│   │   │   ├── kia-carens.jpg
+│   │   │   ├── wedding.jpg
+│   │   │   ├── long-drive.jpg
+│   │   │   └── function.jpg
+│   │   └── favicon.ico
+│   │
+│   └── src/
+│       ├── assets/
+│       │   └── images/
+│       │
+│       ├── components/
+│       │   ├── Navbar.jsx
+│       │   ├── Footer.jsx
+│       │   ├── CarCard.jsx
+│       │   ├── BookingForm.jsx
+│       │   ├── DriverCard.jsx
+│       │   ├── OccasionCard.jsx
+│       │   └── BookingSummary.jsx
+│       │
+│       ├── pages/
+│       │   ├── Home.jsx
+│       │   ├── Cars.jsx
+│       │   ├── CarDetails.jsx
+│       │   ├── Occasion.jsx
+│       │   ├── Booking.jsx
+│       │   ├── MyBookings.jsx
+│       │   ├── BookingDetails.jsx
+│       │   ├── Login.jsx
+│       │   ├── Register.jsx
+│       │   ├── Profile.jsx
+│       │   └── NotFound.jsx
+│       │
+│       ├── pages/
+│       │   └── admin/
+│       │       ├── AdminDashboard.jsx
+│       │       ├── Bookings.jsx
+│       │       ├── Drivers.jsx
+│       │       ├── Car.jsx
+│       │       └── Users.jsx
+│       │
+│       ├── services/
+│       │   ├── authService.js
+│       │   ├── bookingService.js
+│       │   ├── carService.js
+│       │   └── driverService.js
+│       │
+│       ├── context/
+│       │   ├── AuthContext.jsx
+│       │   └── BookingContext.jsx
+│       │
+│       ├── routes/
+│       │   └── AppRoutes.jsx
+│       │
+│       ├── utils/
+│       │   ├── priceCalculator.js
+│       │   └── validators.js
+│       │
+│       ├── App.jsx
+│       ├── main.jsx
+│       └── index.css
+│
+├── server/                         # Backend
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Car.js
+│   │   ├── Driver.js
+│   │   └── Booking.js
+│   │
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── carController.js
+│   │   ├── driverController.js
+│   │   └── bookingController.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── carRoutes.js
+│   │   ├── driverRoutes.js
+│   │   └── bookingRoutes.js
+│   │
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   └── adminMiddleware.js
+│   │
+│   ├── utils/
+│   │   ├── generateToken.js
+│   │   └── calculatePrice.js
+│   │
+│   ├── seed/
+│   │   └── seedData.js
+│   │
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── README.md
+├── .gitignore
+└── package.json
